@@ -1,12 +1,12 @@
 import './index.css'
-
+import Layout from '../../Components/Layout';
 function Home() {
 
     return (
-        <div className="bg-fuchsia-700">
-            Hola mundo bebé home!
-        </div>
-    )
+        <Layout>
+            HOME
+        </Layout>
+    );
 }
 
 export default Home

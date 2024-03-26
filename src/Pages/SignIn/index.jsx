@@ -4,7 +4,7 @@ function SignIn() {
 
     return (
         <div className="bg-emerald-700">
-            Hola mundo bebé home!
+            Sign In
         </div>
     )
 }

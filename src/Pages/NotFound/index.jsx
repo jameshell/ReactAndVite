@@ -4,7 +4,7 @@ function NotFound() {
 
     return (
         <div className="bg-emerald-700">
-            Hola mundo bebé home!
+            Not Found
         </div>
     )
 }

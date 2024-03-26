@@ -4,7 +4,7 @@ function MyAccount() {
 
     return (
         <div className="bg-emerald-700">
-            Hola mundo bebé home!
+            My Account
         </div>
     )
 }
