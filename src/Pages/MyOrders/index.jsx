@@ -1,11 +1,12 @@
 import './index.css'
+import Layout from '../../Components/Layout';
 
 function MyOrders() {
 
     return (
-        <div className="bg-emerald-700">
+        <Layout>
             My Orders
-        </div>
+        </Layout>
     )
 }
 

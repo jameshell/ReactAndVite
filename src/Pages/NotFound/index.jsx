@@ -1,11 +1,12 @@
 import './index.css'
+import Layout from '../../Components/Layout';
 
 function NotFound() {
 
     return (
-        <div className="bg-emerald-700">
-            Not Found
-        </div>
+        <Layout>
+            Not found
+        </Layout>
     )
 }
 

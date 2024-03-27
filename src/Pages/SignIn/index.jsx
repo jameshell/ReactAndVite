@@ -1,11 +1,12 @@
 import './index.css'
+import Layout from '../../Components/Layout';
 
 function SignIn() {
 
     return (
-        <div className="bg-emerald-700">
+        <Layout>
             Sign In
-        </div>
+        </Layout>
     )
 }
 
