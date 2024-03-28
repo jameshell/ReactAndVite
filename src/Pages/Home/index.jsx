@@ -1,14 +1,18 @@
 import './index.css'
 import Layout from '../../Components/Layout';
 import { useState, useEffect } from "react";
-import Card from "../../Components/Card/index.jsx";
+import Card from '../../Components/Card/index.jsx';
+import ProductDetails from '../../Components/ProductDetails/index.jsx';
 function Home() {
     const [items, setItems] = useState(null);
     
     useEffect(()=> {
         fetch('https://api.escuelajs.co/api/v1/products')
             .then(response => response.json())
-            .then(data => setItems(data))
+            .then((data) => {
+                setItems(data);
+                console.log(data);
+            });
     }, []);
     
     return (
@@ -21,6 +25,7 @@ function Home() {
                     ))
                 }
             </div>
+            {/*<ProductDetails />*/}
         </Layout>
     );
 }
