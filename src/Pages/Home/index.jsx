@@ -1,12 +1,24 @@
 import './index.css'
 import Layout from '../../Components/Layout';
+import { useState, useEffect } from "react";
 import Card from "../../Components/Card/index.jsx";
 function Home() {
-
+    const [items, setItems] = useState(null);
+    
+    useEffect(()=> {
+        fetch('https://api.escuelajs.co/api/v1/products')
+            .then(response => response.json())
+            .then(data => setItems(data))
+    }, []);
+    
     return (
         <Layout>
-            HOME
-            <Card />
+            Home
+            {
+                items?.map((item) => (
+                        <Card key={item.id} data={item}/>
+                    ))
+            }
         </Layout>
     );
 }
