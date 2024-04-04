@@ -1,5 +1,5 @@
 import './index.css';
-import {XMarkIcon} from "@heroicons/react/24/solid/index.js";
+import { XMarkIcon } from "@heroicons/react/24/solid/index.js";
 import { useState } from "react";
 
 const ProductDetails = () => {
