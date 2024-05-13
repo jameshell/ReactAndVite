@@ -5,6 +5,7 @@ import { ShoppingCartContext } from "../../Context/index.jsx";
 
 const ProductDetails = () => {
     const context = useContext(ShoppingCartContext);
+    console.log('PRODUCT TO SHOW:', context.productToShow);
     const [hover, setHover] = useState(false);
     return (
         <aside

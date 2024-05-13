@@ -1,14 +1,18 @@
-import {useContext, useState} from 'react';
+import { useContext, useState } from 'react';
 import { ShoppingCartContext } from '../../Context/index.jsx';
-import {PlusIcon} from "@heroicons/react/24/solid/index.js";
+import { PlusIcon } from "@heroicons/react/24/solid/index.js";
 
 const Card = (data) => {
     const context = useContext(ShoppingCartContext);
     const [hover, setHover] = useState(false);
+    const showProduct = (productDetails) => {
+        context.openProductDetail();
+        context.setProductToShow(productDetails);
+    };
     return (
         <div 
             className='bg-white cursor-pointer w-56 h-60 rounded-lg'
-            onClick={()=> context.openProductDetail()}>
+            onClick={()=> showProduct(data.data)}>
             <figure className='relative mb-2 w-full h-4/5'>
                 <span className='absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-xs m-2 px-2 py-0.5'>{data.data.category.name}</span>
                 <img className='w-full h-full object-cover rounded-lg' src={data.data.category.image} alt={data.data.title} />
